@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-[#15202B] text-white`}>
           <div className='grid grid-cols-10 divide-x divide-gray-700 h-screen w-full'>
-            <div className='md:col-span-3 col-span-2'>
+            <div className='lg:col-span-3 col-span-2'>
               <Navbar />
             </div>
-            <div className='md:col-span-7 col-span-8'>
+            <div className='lg:col-span-7 col-span-8'>
               {children}
             </div>
           </div>
