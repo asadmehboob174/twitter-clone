@@ -4,7 +4,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className=''>
+    <div className='fixed top-0 w-[21%] lg:w-[30%]'>
         <div className='flex flex-col items-center md:items-end w-full 2xl:w-[92%] mx-auto pr-5 pt-2'>
           <div className='space-y-1'>
               <Twitter className='text-[#1DA1F2] h-12 pl-1'  />
