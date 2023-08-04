@@ -5,8 +5,8 @@ import publicImage from '@/public/feed-image.png';
 
 const Home = () => {
   return (
-    <div className='divide-y gap-4 divide-gray-700 h-full'>
-        <div className='fixed w-[40%] lg:w-[34.95%] bg-[#15202B]/70 backdrop-blur-md border-b-[0.1px] border-gray-200/20 top-0 h-[100px] flex flex-col items-start justify-between z-[100]'>
+    <div className='h-full'>
+        <div className='border-b-[0.1px] border-gray-600 fixed w-full lg:w-[53.3%] 2xl:w-[34.95%] bg-[#15202B]/70 backdrop-blur-md border-gray-200/20 top-0 h-[100px] flex flex-col items-start justify-between z-[100]'>
             <div className='pl-4 pt-3'>
                 <h1 className='text-lg font-semibold'>Home</h1>
             </div>
@@ -15,13 +15,13 @@ const Home = () => {
                   <Tabs className='flex items-center justify-center'>Following</Tabs>
             </div>
         </div>
-        <div className='min-h-[100px] mt-[100px] overflow-hidden z-10'>
+        <div className='min-h-[100px] mt-[100px] overflow-hidden z-10 border-b-[0.1px] border-gray-600'>
 
         </div>
-        <div className='h-[50px] row-span-1 overflow-hidden'>
+        <div className='h-[50px] row-span-1 overflow-hidden border-b-[0.1px] border-gray-600'>
 
         </div>
-        <div className='h-auto row-span-1 divide-y divide-gray-700 overflow-hidden'>
+        <div className='h-auto row-span-1 divide-y divide-gray-700 overflow-hidden border-b-[0.1px] border-gray-600'>
              {
                Array.from({ length: 10 }).map((item, index) => {
                 return (
