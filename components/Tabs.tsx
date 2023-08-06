@@ -8,9 +8,9 @@ interface TabsProps extends HTMLAttributes<HTMLButtonElement> {
 };
 
 
-const Tabs = forwardRef<HTMLButtonElement,TabsProps>(({children, className}, ref) => {
+const Tabs = forwardRef<HTMLButtonElement,TabsProps>(({children, className, ...props}, ref) => {
   return (
-    <button  ref={ref} type='button'
+    <button  ref={ref} {...props} type='button'
           className={`
             w-full 
             text-sm 
