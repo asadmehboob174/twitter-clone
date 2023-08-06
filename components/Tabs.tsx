@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { FC, HTMLAttributes } from 'react'
 
 interface TabsProps extends HTMLAttributes<HTMLButtonElement> {
@@ -8,9 +8,9 @@ interface TabsProps extends HTMLAttributes<HTMLButtonElement> {
 };
 
 
-const Tabs = React.forwardRef<HTMLButtonElement,TabsProps>(({children, className, ...props}, ref) => {
+const Tabs = forwardRef<HTMLButtonElement,TabsProps>(({children, className}, ref) => {
   return (
-    <button  ref={ref} {...props} type='button'
+    <button  ref={ref} type='button'
           className={`
             w-full 
             text-sm 
@@ -24,6 +24,8 @@ const Tabs = React.forwardRef<HTMLButtonElement,TabsProps>(({children, className
     </button>
   )
 })
+
+Tabs.displayName = 'Tabs';
 
 export default Tabs
 
