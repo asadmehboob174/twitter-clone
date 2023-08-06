@@ -27,11 +27,18 @@ const Home = () => {
                 <h1 className='text-lg font-semibold'>Home</h1>
             </div>
             <div className='w-full h-2/4 flex items-center justify-center'>
-                  <Tabs ref={yourHomeRef} selected={selectedTab} onClick={(e) => handleClick(e, yourHomeRef, 0)} className='flex items-center justify-center'>
-                  For You
-                  <div className='border-b-4 border-blue-500 h-1 w-[64px] translate-y-3'></div>
+                  <Tabs ref={yourHomeRef} onClick={(e) => handleClick(e, yourHomeRef, 0)} className='flex items-center justify-center'>
+                     <span className='inline-flex flex-col pt-2 items-center justify-center'>
+                      For You
+                      <span className={`${selectedTab == 0 ? 'border-b-4 border-blue-500 rounded-full' : 'border-none'} translate-y-[10px] h-1 w-[58px]`}></span>
+                     </span>
                   </Tabs>
-                  <Tabs ref={yourFollowingRef} selected={selectedTab} onClick={(e) => handleClick(e, yourFollowingRef,1)} className='flex items-center justify-center'>Following</Tabs>
+                  <Tabs ref={yourFollowingRef} onClick={(e) => handleClick(e, yourFollowingRef,1)} className='flex items-center justify-center h-full'>
+                    <span className='inline-flex flex-col pt-2 items-center justify-center'>
+                      Fowllowing
+                         <span className={`${selectedTab == 1 ? 'border-b-4 border-blue-500 rounded-full' : 'border-none'} translate-y-[10px] h-1 w-[76px]`}></span>
+                     </span>
+                  </Tabs>
             </div>
         </div>
         <div className='min-h-[100px] mt-[100px] overflow-hidden z-10 border-b-[0.1px] border-gray-600'>
@@ -40,8 +47,8 @@ const Home = () => {
         <div className='h-[50px] row-span-1 overflow-hidden border-b-[0.1px] border-gray-600'>
 
         </div>
-        {selectedTab == 0 && <YourFollowing /> }
-        {selectedTab == 1 && <YourHome /> }
+        {selectedTab == 0 && <YourHome />  }
+        {selectedTab == 1 && <YourFollowing /> }
     </div>
   )
 }

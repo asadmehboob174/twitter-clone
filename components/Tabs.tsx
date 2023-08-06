@@ -5,11 +5,10 @@ import { FC, HTMLAttributes } from 'react'
 interface TabsProps extends HTMLAttributes<HTMLButtonElement> {
   children : React.ReactNode,
   className? : string,
-  selected? : number
 };
 
 
-const Tabs = React.forwardRef<HTMLButtonElement,TabsProps>(({children, className, selected, ...props}, ref) => {
+const Tabs = React.forwardRef<HTMLButtonElement,TabsProps>(({children, className, ...props}, ref) => {
   return (
     <button  ref={ref} {...props} type='button'
           className={`
@@ -21,10 +20,7 @@ const Tabs = React.forwardRef<HTMLButtonElement,TabsProps>(({children, className
              flex flex-col justify-center
             ${className}`}
             >
-              
               {children}
-
-            
     </button>
   )
 })
